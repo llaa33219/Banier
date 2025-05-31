@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "엔트리-Banier",
+  "version": "1.0",
+  "description": "엔트리에서 메인화면 배너 위치 및 크기 변경이 가능하게 해줍니다.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://playentry.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "배너 설정"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+} 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+    }
+    
+    h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #333;
+      font-size: 16px;
+    }
+    
+    .position-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    
+    .position-option:hover {
+      background-color: #f5f5f5;
+    }
+    
+    .position-option input[type="radio"] {
+      margin-right: 8px;
+    }
+    
+    .position-option label {
+      cursor: pointer;
+      font-size: 14px;
+      color: #555;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <h2>배너 위치 설정</h2>
+  
+  <div class="position-options">
+    <div class="position-option">
+      <input type="radio" id="default" name="position" value="default">
+      <label for="default">1. 기본 - 가장 위 아래</label>
+    </div>
+    
+    <div class="position-option">
+      <input type="radio" id="top" name="position" value="top">
+      <label for="top">2. 가장 위</label>
+    </div>
+    
+    <div class="position-option">
+      <input type="radio" id="popular" name="position" value="popular">
+      <label for="popular">3. 인기 작품 아래</label>
+    </div>
+    
+    <div class="position-option">
+      <input type="radio" id="explore" name="position" value="explore">
+      <label for="explore">4. 탐험하기 아래</label>
+    </div>
+    
+    <div class="position-option">
+      <input type="radio" id="notable" name="position" value="notable">
+      <label for="notable">5. 주목할 만한 작품 아래</label>
+    </div>
+    
+    <div class="position-option">
+      <input type="radio" id="theme" name="position" value="theme">
+      <label for="theme">6. 주제 작품 아래</label>
+    </div>
+    
+    <div class="position-option">
+      <input type="radio" id="entry" name="position" value="entry">
+      <label for="entry">7. 주목할 만한 엔둥이 아래</label>
+    </div>
+    
+    <div class="position-option">
+      <input type="radio" id="challenge" name="position" value="challenge">
+      <label for="challenge">8. 챌린지 아래</label>
+    </div>
+    
+    <div class="position-option">
+      <input type="radio" id="remake" name="position" value="remake">
+      <label for="remake">9. 화제의 리메이크 작품 아래</label>
+    </div>
+    
+    <div class="position-option">
+      <input type="radio" id="bottom" name="position" value="bottom">
+      <label for="bottom">10. 가장 아래</label>
+    </div>
+  </div>
+  
+  <hr style="margin: 20px 0; border: none; height: 1px; background-color: #e0e0e0;">
+  
+  <h2>배너 높이 설정</h2>
+  
+  <div class="height-options">
+    <div class="position-option">
+      <input type="radio" id="height-large" name="height" value="large">
+      <label for="height-large">크게 - 400px</label>
+    </div>
+    
+    <div class="position-option">
+      <input type="radio" id="height-default" name="height" value="default">
+      <label for="height-default">기본 - 160px</label>
+    </div>
+    
+    <div class="position-option">
+      <input type="radio" id="height-custom" name="height" value="custom">
+      <label for="height-custom">커스텀</label>
+    </div>
+  </div>
+  
+  <div class="custom-height-input" id="customHeightInput" style="display: none; margin-top: 10px;">
+    <input type="number" id="customHeight" placeholder="높이 입력 (px)" min="50" max="1000" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px;">
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 
